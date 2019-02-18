@@ -1,0 +1,25 @@
+{
+  "name": "postgres-api",
+  "version": "1.0.0",
+  "description": "RESTful API server running on an Express framework in Node.js and PostgreSQL: https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxproske/postgres-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxproske/postgres-api/issues"
+  },
+  "homepage": "https://github.com/maxproske/postgres-api#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.8.0"
+  }
+}
