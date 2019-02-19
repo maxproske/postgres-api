@@ -59,10 +59,23 @@ const updateUser = (request, response) => {
     });
 };
 
+// DELETE a user
+// $ curl -X DELETE http://localhost:3000/users/1
+const deleteUser = (request, response) => {
+    const id = parseInt(request.params.id);
+    pool.query('DELETE FROM users WHERE id = $1', [id], (error, result) => {
+        if (error) {
+            throw error;
+        }
+        response.status(200).send(`Deleted user with id: ${id}`);
+    });
+};
+
 // Destructure exports
 module.exports = {
     getUsers,
     getUserById,
     createUser,
     updateUser,
+    deleteUser,
 };

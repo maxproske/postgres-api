@@ -14,10 +14,11 @@ app.get('/', (request, response) => {
 });
 
 // API endpoints
-app.get('/users', db.getUsers);
-app.get('/users/:id', db.getUserById);
-app.post('/users', db.createUser);
-app.put('/users/:id', db.updateUser);
+app.get('/users', db.getUsers); // Read
+app.get('/users/:id', db.getUserById); // Read
+app.post('/users', db.createUser); // Create
+app.put('/users/:id', db.updateUser); // Update
+app.delete('/users/:id', db.deleteUser); // Destroy
 
 const server = app.listen(port, (error) => {
     if (error) {
